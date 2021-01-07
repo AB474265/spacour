@@ -1,0 +1,33 @@
+{
+  "name": "spacour",
+  "version": "1.0.0",
+  "description": "Landing page for spacour. A private space-tour company.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AB474265/spacour.git"
+  },
+  "keywords": [
+    "spacour;",
+    "AB474265;",
+    "njm;",
+    "NJM;",
+    "landing",
+    "page;",
+    "website;",
+    "css;",
+    "html;"
+  ],
+  "author": "Abu Bokor Siddik | AB474265",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AB474265/spacour/issues"
+  },
+  "homepage": "https://github.com/AB474265/spacour#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
