@@ -22,6 +22,17 @@
     opacity: 1;
     transform: translateY(0); } }
 
+@keyframes preload {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1); }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5); }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1); } }
+
 *,
 *::after,
 *::before {
@@ -55,7 +66,7 @@ body {
     letter-spacing: 2rem;
     animation-name: moveInLeft;
     animation-duration: 2s;
-    animation-delay: 0.4s;
+    animation-delay: 2s;
     animation-timing-function: ease-out;
     animation-fill-mode: backwards; }
   .heading-primary--sub {
@@ -64,7 +75,7 @@ body {
     font-size: 2rem;
     letter-spacing: 1.5rem;
     animation: moveInRight 2s ease-out;
-    animation-delay: 0.4s;
+    animation-delay: 2s;
     animation-fill-mode: backwards; }
 
 .heading-secondary {
@@ -361,30 +372,57 @@ body {
     transform: translateX(-2rem) skewX(20deg); }
   .story__image {
     height: 100%;
-    transform: translateX(-1rem) scale(1.2);
-    transition: all 0.25s ease-in-out;
-    backface-visibility: hidden; }
+    transform: translateX(-10%) scale(1.3);
+    transition: all 0.25s; }
   .story__text {
     transform: skewX(20deg); }
   .story__caption {
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, 60%);
+    top: 50%;
+    transform: translate(-50%, 50%);
     font-size: 1.7rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
     line-height: 1.9rem;
+    text-align: center;
     opacity: 0;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease;
     backface-visibility: hidden; }
   .story:hover .story__caption {
     opacity: 1;
     transform: translate(-50%, -50%); }
   .story:hover .story__image {
-    transform: scale(1);
-    filter: blur(2px) brightness(80%); }
+    transform: translateX(0%) scale(1);
+    filter: blur(2px) brightness(70%); }
+
+.premium--block {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%); }
+  .premium--block__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #010A19;
+  top: 0%;
+  left: 0%;
+  z-index: 100;
+  transition: all 0.4s ease-in-out; }
+
+#load {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  animation: preload 2s ease infinite; }
 
 .header {
   height: 95vh;
@@ -452,4 +490,9 @@ body {
 .section-story {
   position: relative;
   padding: 12rem 0;
+  text-align: center; }
+
+.premium {
+  position: relative;
+  padding: 50rem 0;
   text-align: center; }
