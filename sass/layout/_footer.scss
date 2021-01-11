@@ -1,0 +1,97 @@
+.footer{
+
+    background-color: $gradiant-color-second;
+    padding: 10rem 0;
+    font-size: 1.3rem;
+    letter-spacing: 0.4px;
+    color: #acacac;
+
+    &__logo-box{
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+
+    &__logo{
+        width: 30rem;
+        height: auto;
+    }
+
+    &__navigation{
+        border-top: 0.1rem solid #acacac;
+        padding-top: 2rem;
+        display: inline-block;
+    }
+
+    &__list{
+        list-style: none;
+    }
+
+    &__link{
+
+        backface-visibility: hidden;
+        transition: all 0.2s ease;
+        font-size: 1.4rem;
+        color: $background-white;
+
+        &:link,
+        &:visited{
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            font-weight: 300 !important;
+            color: $background-white;     
+        }
+
+        &--special{
+            color: $default-color !important;
+            text-shadow: 0 1rem 2rem rgba($color: $default-color, $alpha: 0.4);
+
+            &:hover,
+            &:active,
+            &:focus{
+                background-color: $default-color-2 !important;
+                box-shadow: 0 1rem 2rem rgba($color: $default-color-2, $alpha: 0.4 ) !important;
+            }
+        }
+
+        &:hover,
+        &:active,
+        &:focus{
+            color: $background-white;
+            background-color: $default-color;
+            border-radius: 1px;
+            box-shadow: 0 1rem 2rem rgba($color: $default-color, $alpha: 0.4);
+            padding: 0 1rem;
+            transform: scale(1.1);
+            font-weight: 900;
+        }
+    
+    }
+
+    &__item{
+        display: inline-block;
+
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+    }
+
+    &__copyright{
+        border-top: 0.1rem solid #acacac;
+        padding-top: 2rem;
+        width: 85%;
+        float: right;
+    }
+
+
+    &__final{
+        text-align: center;
+    }
+
+    &__heading{
+        font-size: 1.2rem;
+        font-weight: 300;
+        letter-spacing: 0.4px;
+    }
+
+}

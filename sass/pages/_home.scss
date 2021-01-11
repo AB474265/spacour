@@ -35,8 +35,26 @@
     text-align: center;
 }
 
-.premium{
-    position: relative;
-    padding: 50rem 0;
-    text-align: center;
+.section-book{
+    padding: 15rem 0;
+    background-color: $primary-color;
+
 }
+
+.book{
+    background-image: 
+    linear-gradient(105deg, 
+    rgba($button-background, .8) 0%, rgba($button-background, .8) 50%, transparent 50%), 
+    url(../images/book-image.jpg);
+    background-size: cover;
+    height: 50rem;
+    background-position: top;
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
+
+    &__form{
+        width: 50%;
+        padding: 6rem;
+    }
+}
+

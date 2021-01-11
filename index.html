@@ -12,8 +12,8 @@
 </head>
 <body>
 
-    <div id="loading" >
-        <img src="images/NJM+AB474265.png" alt="loading" id="load">
+    <div id="preloader" >
+        <img src="images/NJM+AB474265.png" alt="loading" id="preloader__icon">
     </div>
 
     <!-- HEADER SECTION  -->
@@ -296,27 +296,97 @@
 
             <a href="#" class="btn btn--white btn--white-tour u-center u-margin-top-big">Read all stories  &rarr;</a>
 
-
-
         </section>
 
-        
+        <!-- BOOKING SECTION -->
 
-
-        <!--Video Section-->
-
-        <!-- <section class="premium">
-            <div class="premium--block">
-                <video class="premium--block__content" autoplay muted loop>
-                    <source src="images/ship.mp4" type="video/mp4" >
-                        Your browser doesn't support multimedia
-                </video>
+        <section class="section-book">
+            <div class="row">
+                <div class="book">
+                    <div class="book__form">
+                        <h2 class="book-header u-bottom-margin-medium">
+                            Start booking now
+                        </h2>
+                        <form action="#" class="form" autocomplete="off">
+                            <div class="form__group">
+                                <input type="text" class="form__input" id="name" placeholder="Full Name" required>
+                                <label for="name" class="form__label">Full Name</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="email" class="form__input" id="email" placeholder="E-mail adress" required>
+                                <label for="email" class="form__label">E-mail adress</label>
+                            </div>
+                            <div class="form__group u-bottom-margin-medium">
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="classic" name="racism" >
+                                    <label for="classic" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Classic
+                                    </label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="premium" name="racism" >
+                                    <label for="premium" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Premium
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="btn__book ">submit &rarr;</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </section> -->
+        </section>
+
     </main>
 
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <img src="images/Spacour logo.png" alt="Spacour Logo" class="footer__logo">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <div class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">contact us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">privacy policy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">terms</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link footer__link--special">Nusrat</a></li>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <div class="footer__copyright">
+                    <p>
+                        This is a fictional website about space tour. This is my first project to learning web design.
+                        Thanks to <a href="http://jonas.io" class="footer__link">Jonas Schmedtmann</a>. I got huge inspiration from him.
+                        He was my instructor in this project. I dedicated this project to my family, specially to my parents
+                        and very specially to my sister <a href="https://www.facebook.com/roji.siddika" class="footer__link footer__link--special">Roji Siddika Meghla</a> 
+                        and to the most special one <a href="https://www.facebook.com/profile.php?id=100009123610974" class="footer__link footer__link--special">Nusrat Jahan Moushumi</a>.
+                    </p>
+    
+                    <p>
+                        This code is fully downloadable. You can copy it to your project under the copyright terms.
+                        Don't forget to attribute.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__final">
+            <h4 class="footer__heading">
+                &copy; 2020 by AB474265. All rights reserved.
+            </h4>
+        </div>
+    </footer>
+
+
+
+
+
     <script>
-        var a=document.getElementById("loading");
+        var a=document.getElementById("preloader");
 
         function myFunction(){
             a.style.display = "none";
@@ -325,9 +395,6 @@
         window.onload = setTimeout( function(){
             a.style.display = "none";
         }, 2000);
-
-
-
     </script>
 </body>
 </html>
