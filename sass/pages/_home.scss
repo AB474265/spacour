@@ -2,6 +2,7 @@
     background-color: $primary-color;
     padding: 23rem 0;
     margin-top: -20vh;
+    transition: all 0.3s;
 }
 
 .features{
@@ -15,6 +16,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     transform: skewY(5deg);
+    transition: all 0.3s;
 
     & > *{
         transform: skewY(-4.5deg); 
@@ -26,18 +28,20 @@
     padding: 23rem 0 15rem 0;
     margin-top: -20vh;
     text-align: center;
+    transition: all 0.3s;
 }
 
 .section-story{
     position: relative;
     padding: 12rem 0;
-    // background-color: royalblue;
     text-align: center;
+    transition: all 0.3s;
 }
 
 .section-book{
     padding: 15rem 0;
     background-color: $primary-color;
+    transition: all 0.3s;
 
 }
 

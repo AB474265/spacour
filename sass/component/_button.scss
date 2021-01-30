@@ -9,7 +9,7 @@
    animation-name: fadeIn;
    animation-duration: 0.5s;
    animation-timing-function: ease-out;
-   animation-delay: 2s;
+   animation-delay: 2.5s;
    animation-fill-mode: backwards;
    cursor: pointer;
 
@@ -69,30 +69,21 @@
    }
 }
 
-.text-button:link,
-.text-button:visited{
-  display: inline-block;
-  font-size: $default-font-size;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 3px 2px;
-  color: $button-background;
-  border-bottom: 1.5px solid;
-  transition: all 0.1s;
-
-  &:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
-    background-color: $button-background;
-    color: $font-color-primary;
-    border-bottom: none;
-    padding: 4px;
+#click-btn{
+  &:link,
+  &:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba($color: $default-color, $alpha: 1.0);
+    border-bottom: 1.3px solid rgb(0, 255, 255);
+    padding: 0.3rem 0rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
   }
 
-  &:active{
-    transform: translateY(0px);
-    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.6);
-  }
 }
 
 .btn__book{

@@ -12,8 +12,34 @@
 </head>
 <body>
 
-    <div id="preloader" >
-        <img src="images/NJM+AB474265.png" alt="loading" id="preloader__icon">
+    <!-- PRE-LOADER SECTION -->
+    <pre-loader class="preloader" >
+        <div class="preloader__container">
+            <div class="preloader__content">
+                <span>&nbsp;</span>
+            </div>
+        </div>
+    </pre-loader>
+
+    <!-- NAVBAR SECTION -->
+
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">
+            &nbsp;
+        </div>
+        <div class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#section-about" class="navigation__link">About Spacour</a></li>
+                <li class="navigation__item"><a href="#features" class="navigation__link">Your Benifits</a></li>
+                <li class="navigation__item"><a href="#tour" class="navigation__link">Popular tours</a></li>
+                <li class="navigation__item"><a href="#section-story" class="navigation__link">stories</a></li>
+                <li class="navigation__item"><a href="#section-book" class="navigation__link">Book Now</a></li>
+            </ul>
+        </div>
     </div>
 
     <!-- HEADER SECTION  -->
@@ -37,7 +63,7 @@
 
         <!-- ABOUT SECTION -->
 
-        <section class="section-about">
+        <section class="section-about" id="section-about">
             <div class="u-center u-bottom-margin-big">
                 <h2 class="heading-secondary">
                     Marvelous tours for adventurous people
@@ -57,7 +83,7 @@
                     <p class="paragraph">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum reiciendis architecto itaque, amet velit tenetur in officia iusto hic, quis quam ut non eveniet! In libero ducimus sint porro.
                     </p>
-                    <a href="#" class="text-button">
+                    <a href="#" id="click-btn">
                         learn more &rarr;
                     </a>
                 </div>
@@ -75,7 +101,7 @@
         
         <!-- FEATURES SECTION -->
 
-        <section class="features">
+        <section class="features" id="features">
             <div class="row">
                 <div class="col-1-of-4">
                     <div class="feature-box">
@@ -128,7 +154,7 @@
         
         <!-- TOUR SECTION -->
 
-        <section class="tour">
+        <section class="tour" id="tour">
             <div class="u-center u-bottom-margin-big">
                 <h2 class="heading-secondary">
                     Our popular tours
@@ -162,7 +188,7 @@
                                     <p class="card__price-only">only</p>
                                     <p class="card__price-value">$300k</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now</a>
+                                <a href="#pop-up" class="btn btn--white">Book now</a>
                             </div>
                         </div>
                     </div>
@@ -196,7 +222,7 @@
                                     <p class="card__price-only">only</p>
                                     <p class="card__price-value">$150k</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now</a>
+                                <a href="#pop-up" class="btn btn--white">Book now</a>
                             </div>
                         </div>
                     </div>
@@ -230,7 +256,7 @@
                                     <p class="card__price-only">only</p>
                                     <p class="card__price-value">$20M</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now</a>
+                                <a href="#pop-up" class="btn btn--white">Book now</a>
                             </div>
                         </div>
                     </div>
@@ -242,7 +268,7 @@
 
         <!-- STORY SECTION -->
 
-        <section class="section-story">
+        <section class="section-story" id="section-story">
 
             <div class="bg-video" >
                 <video  class="bg-video__content" autoplay muted loop>
@@ -300,7 +326,7 @@
 
         <!-- BOOKING SECTION -->
 
-        <section class="section-book">
+        <section class="section-book" id="section-book">
             <div class="row">
                 <div class="book">
                     <div class="book__form">
@@ -381,12 +407,39 @@
         </div>
     </footer>
 
+        <!-- POP-UP WINDOW SECTION -->
+
+    <div class="pop-up" id="pop-up">
+        <div class="pop-up__content">
+            <div class="pop-up__left">
+                <img src="images/travel-2.jpg" alt="Travel image" class="pop-up__img">
+                <img src="images/travel-3.jpg" alt="Travel image" class="pop-up__img">
+            </div>
+            <div class="pop-up__right">
+                <h2 class="book-header u-bottom-margin-medium">
+                    Start booking now
+                </h2>
+                <a href="#tours" class="pop-up__closed">&times;</a>
+                <p class="pop-up__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, commodi cum. 
+                    Minus officia aut sed iste suscipit earum natus, itaque et facere ex similique, 
+                    sequi numquam, commodi possimus nisi aperiam. Lorem ipsum dolor sit amet, consectetur a
+                    dipisicing elit. Libero adipisci beatae exercitationem eos inventore! Tempore beatae 
+                    quia nemo illo aliquam velit, enim delectus, 
+                    similique est reprehenderit optio porro recusandae dolores!
+                </p>
+                <button class="btn__book u-margin-top-small">submit &rarr;</button>
+            </div>
+        </div>
+    </div>
+
+
 
 
 
 
     <script>
-        var a=document.getElementById("preloader");
+        var a=document.querySelector(".preloader");
 
         function myFunction(){
             a.style.display = "none";

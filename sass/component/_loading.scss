@@ -1,21 +1,66 @@
-#preloader{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: #010A19;
+
+.preloader{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  width: 100%;
+  background-color: #010A19;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+
+  &__content{
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    background-color: transparent;
+    animation: preloader 1s linear infinite;
+  }
+
+  &__content::before{
+    content: "";
+    position: absolute;
     top: 0%;
     left: 0%;
-    z-index: 100;
-    transition: all 0.4s ease-in-out;
+    height: 100%;
+    width: 50%;
+    background-image: linear-gradient( to top, transparent, rgba(0,255,255,0.7));
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background-size: 5rem 9rem;
+    background-repeat: no-repeat;
+  }
 
-    &__icon{
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      width: 20%;
-      animation: preload 2s ease infinite;
-    
-    }
-    
+  &__content::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: cyan;
+    box-shadow: 0rem 0rem 2rem rgb(0, 255, 255),
+                0rem 0rem 4rem rgb(0, 255, 255),
+                0rem 0rem 6rem rgb(0, 255, 255),
+                0rem 0rem 8rem rgb(0, 255, 255),
+                0rem 0rem 10rem rgb(0, 255, 255),
+                0rem 0rem 12rem rgb(0, 255, 255);
+    z-index: 10;
+  }
+
+  &__content span{
+    @include absPosition;
+
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    background-color:  #010A19;
+    z-index: 8;
+  }
+
 }
